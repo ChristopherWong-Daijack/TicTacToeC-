@@ -198,7 +198,7 @@ bool TicTac::check(int board[ArrayY][ArrayX], bool isPlayer1Turn) {
 }
 
 void TicTac::convertToArray(int input) {
-	if (input == 1) {
+	/*if (input == 1) {
 		x = 0;
 		y = 0;
 	}else if (input == 2) {
@@ -232,6 +232,7 @@ void TicTac::convertToArray(int input) {
 	else if (input == 9) {
 		x = 2;
 		y = 2;
-	}
-	
+	}*/
+	x = (input - 1) / ArrayX;
+	y = (input - 1) % ArrayY;
 }

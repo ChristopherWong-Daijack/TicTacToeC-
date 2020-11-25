@@ -19,6 +19,8 @@ public:
 	TicTac() {};
 	bool check(int board[ArrayY][ArrayX], bool isPlayer1Turn);
 	void convertToArray(int value);
+	bool tieGame(int board[ArrayY][ArrayX]);
+
 };
 
 

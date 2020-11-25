@@ -16,6 +16,7 @@ int main() {
 	int playerturn = 2;
 	int input = 0;
 	bool isPlayer1Turn = false;
+	bool tieGame = false;
 	while (gameOn == true) {
 		if (playerturn % 2 == 0) {//Player 1
 			isPlayer1Turn = true;
@@ -29,6 +30,10 @@ int main() {
 			if (game.check(board, isPlayer1Turn) == true) {
 				gameOn = false;
 				cout << "Player 1 wins" << endl;
+			}
+			else if (game.tieGame(board)==true) {
+				cout << "Tie Game" << endl;
+				gameOn = false;
 			}
 			
 			//Run some check to see if input is valid or if he won
@@ -49,6 +54,10 @@ int main() {
 			if (game.check(board, isPlayer1Turn) == true) {
 				gameOn = false;
 				cout << "Player 2 wins" << endl;
+			}
+			else if (game.tieGame(board) == true) {
+				cout << "Tie Game" << endl;
+				gameOn = false;
 			}
 
 			game.drawGrid(board);

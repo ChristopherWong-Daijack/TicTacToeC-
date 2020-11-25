@@ -196,7 +196,18 @@ bool TicTac::check(int board[ArrayY][ArrayX], bool isPlayer1Turn) {
 	
 	return winner;
 }
-
+bool TicTac::tieGame(int board[ArrayY][ArrayX]) {
+	bool tieGame = true;
+	for (int i = 0; i < MAX; i++) {
+		for (int j = 0; j < MAX; j++) {
+			if (board[i][j]== 0) {//If any array has a 0 this means game isn't finishe
+				tieGame = false;
+			}
+			
+		}
+	}
+	return tieGame;
+}
 void TicTac::convertToArray(int input) {
 	/*if (input == 1) {
 		x = 0;
